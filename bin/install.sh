@@ -2,7 +2,7 @@
 
 # Copy the basic settings.
 mkdir -p ~/.vim/bundle
-cp -Rf ./src/* ~/
+cp -rf ./src/ ~/
 
 # Scan configuration of the vim, and find all plugins that must be installed
 # through vundle.
