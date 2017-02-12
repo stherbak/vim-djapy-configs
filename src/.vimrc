@@ -43,6 +43,7 @@ endif
 
 """ SEARCH
 """ Highlight searched words.
+""" !Problem in MacOS.
 " set hlsearch
 " nnoremap <Esc> :noh<return><Esc>
 

@@ -39,6 +39,11 @@ endif
 """ Disable beeping (aka 'bell') and window flashing, it is only for GUI Vim.
 set visualbell t_vb=
 
+""" SEARCH
+""" Highlight searched words.
+set hlsearch
+nnoremap <Esc> :noh<return><Esc>
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """ SYNTAX HIGHLIGHTING RULES
