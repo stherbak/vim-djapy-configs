@@ -1,5 +1,4 @@
-" VIM CONFIGURATIONS
-" Author: valsorym <i@valsorym.com>
+
 " Date: 2012-12-12 - 2017-12-02
 
 
@@ -506,6 +505,9 @@ nmap <C-x>   :TrimSpaces<CR>
 """
 """ Key mapping.
 let g:move_key_modifier = 'S'
+
+""" Do not change of the moved block.
+let g:move_auto_indent = 0
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
