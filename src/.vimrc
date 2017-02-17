@@ -467,7 +467,7 @@ nmap <S-q> :call ReSwap()<CR>
 """ Remove trailing blanks.
 """ USAGE: Ctrl+x, a
 function ShowSpaces(...)
-    let @/='\\v(\\s+$)|( +\\ze\\t)'
+    let @/="\\v(\\s+$)|( +\\ze\\t)"
     let oldhlsearch=&hlsearch
     if !a:0
         let &hlsearch=!&hlsearch
@@ -479,7 +479,7 @@ endfunction
 
 function TrimSpaces() range
     let oldhlsearch=ShowSpaces(1)
-    execute a:firstline.','.a:lastline.'substitute ///gec'
+    execute a:firstline.",".a:lastline."substitute ///gec"
     let &hlsearch=oldhlsearch
 endfunction
 
