@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 # Author: valsorym <i@valsorym.com>
 
 mkdir -p ~/.vim/colors

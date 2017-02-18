@@ -3,5 +3,5 @@
 
 all: install
 install:
-	sh ./bin/install.sh
+	bash ./bin/install.sh
 

@@ -1,8 +1,8 @@
-#!/bin/sh
+#!/bin/bash
 
 # Copy the basic settings.
 mkdir -p ~/.vim/bundle
-cp -rf ./src/ ~/
+cp -Rf ./src/.vim ./src/.vimrc ./src/.gvimrc ~/
 
 # Scan configuration of the vim, and find all plugins that must be installed
 # through vundle.
@@ -15,7 +15,7 @@ do
 done
 
 # Upgrade.
-sh ~/.vim/bin/upgrade.sh
+bash ~/.vim/bin/upgrade.sh
 
 echo "Done!"
 

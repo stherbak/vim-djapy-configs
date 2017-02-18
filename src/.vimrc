@@ -41,15 +41,15 @@ if has('multi_byte')
     endif
 endif
 
-""" SEARCH
-""" Highlight searched words.
-""" !Problem in MacOS when using the console version  of the editor.
-if has("unix")
-    if system('uname -s') == "Linux\n"
-        set hlsearch
-        nnoremap <Esc> :noh<return><Esc>
-    endif
-endif
+""" """ SEARCH
+""" """ Highlight searched words.
+""" """ !Problem in MacOS when using the console version  of the editor.
+""" if has("unix")
+"""     if system('uname -s') == "Linux\n"
+"""         set hlsearch
+"""         nnoremap <Esc> :noh<return><Esc>
+"""     endif
+""" endif
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
