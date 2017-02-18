@@ -44,6 +44,12 @@ set visualbell t_vb=
 set hlsearch
 nnoremap <Esc> :noh<return><Esc>
 
+""" STATUSBAR SETTINGS
+""" Show pressed keys in normal mode.
+set showcmd
+
+""" To display the status line always.
+set laststatus=2
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """ SYNTAX HIGHLIGHTING RULES

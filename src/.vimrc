@@ -1,4 +1,5 @@
-
+" VIM CONFIGURATIONS
+" Author: valsorym <i@valsorym.com>
 " Date: 2012-12-12 - 2017-12-02
 
 
@@ -42,9 +43,13 @@ endif
 
 """ SEARCH
 """ Highlight searched words.
-""" !Problem in MacOS.
-" set hlsearch
-" nnoremap <Esc> :noh<return><Esc>
+""" !Problem in MacOS when using the console version  of the editor.
+if has("unix")
+    if system('uname -s') == "Linux\n"
+        set hlsearch
+        nnoremap <Esc> :noh<return><Esc>
+    endif
+endif
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -88,11 +93,15 @@ set number
 set numberwidth=5
 
 """ STATUSBAR SETTINGS
+""" Show pressed keys in normal mode.
+set showcmd
+
+""" To display the status line always.
+set laststatus=2
+
 """ Display typed commands in the statsubar and make autocompletion using
 """ the <Tab> key. Always show the status of open file in the status bar.
-set showcmd
 set wildmenu
-set laststatus=2
 set statusline=%<%f\%{(&modified)?'\*\ ':''}%*%=C:%c%V,R:%l\ %P\ \[%{&encoding}\]
 
 """ BACKSPACE
@@ -397,13 +406,15 @@ let g:bufExplorerSortBy='fullpath'
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """ TABS
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-""" See ~/.vim/plugins/tabs.vim
+""" Styling of the tabs.
 """ USAGE:
 """     Ctrl+j - move tab left;
 """     Ctrl+k - move tab right;
 """     Ctrl+h - move tab to first position;
 """     Ctrl+l - move tab to last position;
 """     Ctrl+z - open first tab.
+""" URLS:
+"""     https://github.com/valsorym/vim-tabs
 """
 """ TAB LABEL STYLE
 """ 0. Short tabs - only filename.
@@ -462,36 +473,18 @@ nmap <S-q> :call ReSwap()<CR>
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-""" REMOVAL OF DEBRIS
+""" CLEARDEBRIS
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """ Remove trailing blanks.
 """ USAGE: Ctrl+x, a
-function ShowSpaces(...)
-    let @/="\\v(\\s+$)|( +\\ze\\t)"
-    let oldhlsearch=&hlsearch
-    if !a:0
-        let &hlsearch=!&hlsearch
-    else
-        let &hlsearch=a:1
-    end
-    return oldhlsearch
-endfunction
-
-function TrimSpaces() range
-    let oldhlsearch=ShowSpaces(1)
-    execute a:firstline.",".a:lastline."substitute ///gec"
-    let &hlsearch=oldhlsearch
-endfunction
-
+""" URLS:
+"""     https://github.com/valsorym/vim-clear-debris
+"""
 """ Key mapping.
 command -bar -nargs=? ShowSpaces call ShowSpaces(<args>)
 command -bar -nargs=0 -range=% TrimSpaces <line1>,<line2>call TrimSpaces()
-imap <C-x>   <Esc>:TrimSpaces<CR>
-nmap <C-x>   :TrimSpaces<CR>
-
-""" Auto remove trailing blanks.
-""" * Only in: *.html, *.css, *.js, *.py ...
-" autocmd BufWritePre *.html *.css, *.js *.py *.txt :%s/\s\+$//e
+imap <C-x> <Esc>:TrimSpaces<CR>
+nmap <C-x> :TrimSpaces<CR>
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -554,6 +547,7 @@ Plugin 'valsorym/vim-djapy-syntax'
 Plugin 'valsorym/vim-geek-theme'
 
 Plugin 'valsorym/vim-tabs'
+Plugin 'valsorym/vim-clear-debris'
 Plugin 'valsorym/vim-bufexplorer' " or original: 'jlanzarotta/bufexplorer'
 Plugin 'valsorym/vim-nerdtree' " or original: 'scrooloose/nerdtree'
 
