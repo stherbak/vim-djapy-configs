@@ -317,12 +317,12 @@ let NERDTreeChDirMode=2
 
 """ Ignore files.
 let g:NERDTreeIgnore=[
-    \ '\\.pyc$',
-    \ '\\.swo$',
-    \ '\\.swp$',
-    \ '\\.core$',
-    \ '\\.o$',
-    \ '^_del\\.'
+    \ "\\.pyc$",
+    \ "\\.swo$",
+    \ "\\.swp$",
+    \ "\\.core$",
+    \ "\\.o$",
+    \ "^_del\\."
 \]
 
 """ Add bookmark.
@@ -561,7 +561,7 @@ Plugin 'majutsushi/tagbar'
 """ ... end plugin list.
 
 call vundle#end()
-filetype plugin indent on
+""" filetype plugin indent on
 
 " Copy colors and syntax from bundle packages.
 "command PluginUpgrade execute '!sh ~/.vim/bin/upgrade.sh'
