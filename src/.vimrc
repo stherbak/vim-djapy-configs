@@ -67,10 +67,12 @@ au BufNewFile,BufRead *.less set filetype=less
 au BufNewFile,BufRead *.html set filetype=htmldjango
 au BufNewFile,BufRead *.tmpl set filetype=html.tornadotmpl
 au BufNewFile,BufRead *.py set filetype=python
-au BufNewFile,BufRead *.css set filetype=scss
+au BufNewFile,BufRead *.css set filetype=css
+au BufNewFile,BufRead *.scss set filetype=scss
 au BufNewFile,BufRead *.po set filetype=po
 au BufNewFile,BufRead *.go set filetype=go
 au BufNewFile,BufRead *.jinja set filetype=jinja
+au BufNewFile,BufRead *.ts set filetype=typescript
 
 """ When update the buffer need update syntax highlighting too. This is
 """ important when searching in large files.
@@ -154,6 +156,16 @@ set expandtab
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
+
+""" ... for typescript and html/css files set 2 spaces.
+autocmd FileType html setlocal shiftwidth=2 tabstop=2
+autocmd FileType scss setlocal shiftwidth=2 tabstop=2
+autocmd FileType css setlocal shiftwidth=2 tabstop=2
+autocmd FileType typescript setlocal shiftwidth=2 tabstop=2
+autocmd FileType javascript setlocal shiftwidth=2 tabstop=2
+autocmd FileType python setlocal expandtab shiftwidth=4 softtabstop=4
+autocmd FileType make setlocal noexpandtab
+
 
 """ SPECIAL CHAR SETTINGS
 """  Display wildcards: tabs and spaces at the end.
@@ -525,6 +537,16 @@ let g:multi_cursor_next_key='<S-f>'
 let g:multi_cursor_prev_key='<S-b>'
 let g:multi_cursor_skip_key='<S-x>'
 let g:multi_cursor_quit_key='<Esc>'
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""" TYPESCRIPT
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:typescript_compiler_binary = 'tsc'
+let g:typescript_compiler_options = ''
+autocmd FileType typescript :set makeprg=tsc
+autocmd QuickFixCmdPost [^l]* nested cwindow
+autocmd QuickFixCmdPost    l* nested lwindow
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """ VUNDLE
