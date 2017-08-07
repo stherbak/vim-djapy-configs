@@ -23,6 +23,8 @@ set lines=37 columns=126
 if has("gui_running")
     if has("gui_gtk2")
         set guifont=Courier\ New\ 13
+    elseif has("gui_gtk3")
+        set guifont=Courier\ New\ 13
     elseif has("gui_photon")
         set guifont=Courier\ New:s13
     elseif has("gui_kde")
