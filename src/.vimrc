@@ -548,6 +548,20 @@ autocmd FileType typescript :set makeprg=tsc
 autocmd QuickFixCmdPost [^l]* nested cwindow
 autocmd QuickFixCmdPost    l* nested lwindow
 
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""" COLORIZER
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""" Remove trailing blanks.
+""" USAGE: Ctrl+i
+""" URLS:
+"""     https://github.com/valsorym/vim-colorizer
+"""
+""" Key mapping.
+imap <C-i> <Esc>:ColorToggle<CR>
+nmap <C-i> :ColorToggle<CR>
+
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """ VUNDLE
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -572,6 +586,7 @@ Plugin 'valsorym/vim-tabs'
 Plugin 'valsorym/vim-clear-debris'
 Plugin 'valsorym/vim-bufexplorer' " or original: 'jlanzarotta/bufexplorer'
 Plugin 'valsorym/vim-nerdtree' " or original: 'scrooloose/nerdtree'
+Plugin 'valsorym/vim-colorizer' " or original: 'chrisbra/Colorizer'
 
 Plugin 'matze/vim-move'
 Plugin 'terryma/vim-multiple-cursors'
