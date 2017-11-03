@@ -560,7 +560,6 @@ autocmd QuickFixCmdPost    l* nested lwindow
 """     https://github.com/valsorym/vim-colorizer
 """
 """ Key mapping.
-imap <C-i> <Esc>:ColorToggle<CR>
 nmap <C-i> :ColorToggle<CR>
 
 
