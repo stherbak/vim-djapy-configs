@@ -552,7 +552,9 @@ autocmd QuickFixCmdPost    l* nested lwindow
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """ COLORIZER
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-""" Remove trailing blanks.
+""" Color highlight toggle.
+""" Highlights the specific color code in css,
+""" for example: #fff, #efefef, red etc.
 """ USAGE: Ctrl+i
 """ URLS:
 """     https://github.com/valsorym/vim-colorizer
