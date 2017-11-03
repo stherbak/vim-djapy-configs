@@ -5,8 +5,11 @@ It is VIM configurations files for comfortable work of python/django web develop
 
 To install additional packages need to install [vundle](https://github.com/VundleVim/Vundle.vim).
 
+
 Required
 --------
+
+Version: 8.0 +
 
 Only for UNIX-like platform (Linux, FreeBSD, MacOS, etc.). You need to install: `git`, `curl`, `ctags`. 
 
@@ -25,6 +28,7 @@ Configurations include the installation of the following packages:
 - [terryma/vim-multiple-cursors](https://github.com/terryma/vim-multiple-cursors) - plugin allows you to set several simultaneous cursor for text editing;
 - [majutsushi/tagbar](https://github.com/majutsushi/tagbar) - plugin that provides an easy way to browse the tags of the current file and get an overview of its structure.
 
+
 Quick Start
 -----------
 
@@ -35,6 +39,7 @@ $ git clone git://github.com/valsorym/vim-djapy-configs /tmp/vim-djapy-configs
 $ cd /tmp/vim-djapy-configs
 $ make install
 ```
+
 
 Installation of additional packages
 -----------------------------------
@@ -66,6 +71,7 @@ filetype plugin indent on
 - `:PluginClean` - confirms removal of unused plugins; append `!` to auto-approve removal.
 
 3.The vundle bad install the colors and syntaxes. If you have installed a new themes using vundle - they will not work in the console version of vim.  Use `:PluginUpgrade` to solve this problem.
+
 
 Keyboard Shortcuts
 ------------------
@@ -99,6 +105,7 @@ Keyboard Shortcuts
 - `C-PgUp` or `F5` - tab prev;
 - `C-PgDw` or `F6` - tab next;
 
+
 ## Copy & Paste system's clipboard.
 
 P.s. Install the `vim-gtk` package, and use `select-editor` to select the `vim-gtk` by default.
@@ -109,6 +116,7 @@ P.s. Install the `vim-gtk` package, and use `select-editor` to select the `vim-g
 - `C-v` and `C + v` (i.e. double down) - paste;
 - `C-v`, `v` or `S-v` + `C-Ins` - copy text to an external clipboard;
 - `S-a`, `i`, `S-r` or `r` + `S-Ins` - paste from an external clipboard.
+
 
 ## Flexible editing.
 
@@ -143,6 +151,7 @@ P.s. Install the `vim-gtk` package, and use `select-editor` to select the `vim-g
 - `[z` - move to start of open fold;
 - `]z` - move to end of open fold.
 
+
 ## Visual block.
 
 Click `C-v` and move arrow for select block, and click:
@@ -163,6 +172,7 @@ Click `C-v` and move arrow for select block, and click:
 - `S-d` - remove bookmark (in bookmark section);
 - `S-c` - choose folder as root;
 - `m` - open file manager menu.
+
 
 Tab style
 ---------
