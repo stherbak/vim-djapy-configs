@@ -20,6 +20,7 @@ Configurations include the installation of the following packages:
 - [valsorym/vim-nerdtree](https://github.com/valsorym/vim-nerdtree) - it is fork of [scrooloose/nerdtree](https://github.com/scrooloose/nerdtree) with fixed of some bugs (subjective approach);
 - [valsorym/vim-bufexplorer](https://github.com/valsorym/vim-bufexplorer) - it is fork of [jlanzarotta/bufexplorer](https://github.com/jlanzarotta/bufexplorer) with improved display of open buffers (subjective approach);
 - [valsorym/vim-tabs](https://github.com/valsorym/vim-tabs) - plugin for comfortable management of tabs;
+- [valsorym/vim-colorizer](https://github.com/valsorym/vim-colorizer) - it is fork of [chrisbra/Colorizer](https://github.com/chrisbra/Colorizer) a plugin to color colornames and codes;
 - [matze/vim-move](https://github.com/matze/vim-move) - plugin allows you to move the text up/down without the need to cut/paste;
 - [terryma/vim-multiple-cursors](https://github.com/terryma/vim-multiple-cursors) - plugin allows you to set several simultaneous cursor for text editing;
 - [majutsushi/tagbar](https://github.com/majutsushi/tagbar) - plugin that provides an easy way to browse the tags of the current file and get an overview of its structure.
@@ -80,7 +81,8 @@ Keyboard Shortcuts
 - `C-w`, `<-` or `->` - choose window;
 - `C-u` - undo (don't use just the `u` for undo);
 - `C-r` - redo;
-- `S-q` - reconnect the swap file - it helps when working with files through SSHFS, after crash.
+- `S-q` - reconnect the swap file - it helps when working with files through SSHFS, after crash;
+- `C-i` - color highlight toggle.
 
 ... the other buttons correspond to the parameters by default.
 
