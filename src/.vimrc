@@ -74,7 +74,7 @@ au BufNewFile,BufRead *.go set filetype=go
 au BufNewFile,BufRead *.jinja set filetype=jinja
 au BufNewFile,BufRead *.ts set filetype=typescript
 au BufNewFile,BufRead *.json set filetype=json
-let g:vim_json_syntax_conceal = 0 " JSON highlighting in raw mode...
+let g:vim_json_syntax_conceal = 0 " 0 - JSON highlighting in raw mode.
 
 """ When update the buffer need update syntax highlighting too. This is
 """ important when searching in large files.
@@ -592,6 +592,7 @@ Plugin 'valsorym/vim-nerdtree' " or original: 'scrooloose/nerdtree'
 Plugin 'valsorym/vim-colorizer' " or original: 'chrisbra/Colorizer'
 
 Plugin 'matze/vim-move'
+Plugin 'elzr/vim-json'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'majutsushi/tagbar'
 
