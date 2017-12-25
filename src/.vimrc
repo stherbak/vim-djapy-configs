@@ -442,8 +442,8 @@ let g:bufExplorerSortBy='fullpath'
 """ 4. Show only three first symbol from parent folder + filename.
 """ Show only three first symbol from parent folder + filename.
 set tabline=%!TabName(4)
-
-""" Automatically move the tab to the last position.
+""" 
+""" """ Automatically move the tab to the last position.
 if has('autocmd')
     " If open a lot of tabs and when the tab is editing - moved tab to last
     " position.
@@ -452,11 +452,11 @@ if has('autocmd')
     " If open new tab - move it on the last position.
     autocmd BufNew * call NewTabMoveLast()
 
-    " Autoclose duplicate tabs.
-    " + Add `CloseDuplicateTabs` - duplicate tabs closing command.
-    " * If used NewTabMoveLast method - use CloseDuplicateTabs(1).
-    autocmd BufEnter * call CloseDuplicateTabs(1)
-    command CloseDuplicateTabs :call CloseDuplicateTabs(1)
+    """ " Autoclose duplicate tabs. [!Don't use with vim-nerdtree-tabs].
+    """ " + Add `CloseDuplicateTabs` - duplicate tabs closing command.
+    """ " * If used NewTabMoveLast method - use CloseDuplicateTabs(1).
+    """ autocmd BufEnter * call CloseDuplicateTabs(1)
+    """ command CloseDuplicateTabs :call CloseDuplicateTabs(1)
 endif " autocmd
 
 imap <C-j> <Esc>:call MoveTabLeft()<CR>
@@ -588,17 +588,16 @@ Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'valsorym/vim-djapy-syntax'
 Plugin 'valsorym/vim-geek-theme'
-
 Plugin 'valsorym/vim-tabs'
 Plugin 'valsorym/vim-clear-debris'
 Plugin 'valsorym/vim-bufexplorer' " or original: 'jlanzarotta/bufexplorer'
 Plugin 'valsorym/vim-nerdtree' " or original: 'scrooloose/nerdtree'
 Plugin 'valsorym/vim-colorizer' " or original: 'chrisbra/Colorizer'
-
-Plugin 'matze/vim-move'
-Plugin 'elzr/vim-json'
-Plugin 'terryma/vim-multiple-cursors'
-Plugin 'majutsushi/tagbar'
+Plugin 'valsorym/vim-nerdtree-tabs' " or original: 'jistr/vim-nerdtree-tabs'
+Plugin 'valsorym/vim-move' " or original: 'matze/vim-move'
+Plugin 'valsorym/vim-json' " or original: 'elzr/vim-json'
+Plugin 'valsorym/vim-multiple-cursors' " or original: 'terryma/vim-multiple-cursors'
+Plugin 'valsorym/tagbar' " or original: 'majutsushi/tagbar'
 
 """ ... custom plugins ...
 """ >
