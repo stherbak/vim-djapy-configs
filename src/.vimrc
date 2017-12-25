@@ -324,7 +324,7 @@ map <F8> :emenu Encoding.<TAB>
 """     https://github.com/scrooloose/nerdtree
 """ Position and size.
 let g:NERDTreeWinPos='left'
-let g:NERDTreeWinSize=30
+let g:NERDTreeWinSize=37
 
 """ If used NERDTreeFind - find the file in the directory tree is not my root
 """ directory (installed as Shift+c). But if set the autochdir the root
@@ -452,11 +452,11 @@ if has('autocmd')
     " If open new tab - move it on the last position.
     autocmd BufNew * call NewTabMoveLast()
 
-    """ " Autoclose duplicate tabs. [!Don't use with vim-nerdtree-tabs].
-    """ " + Add `CloseDuplicateTabs` - duplicate tabs closing command.
-    """ " * If used NewTabMoveLast method - use CloseDuplicateTabs(1).
-    """ autocmd BufEnter * call CloseDuplicateTabs(1)
-    """ command CloseDuplicateTabs :call CloseDuplicateTabs(1)
+    " Autoclose duplicate tabs.
+    " + Add `CloseDuplicateTabs` - duplicate tabs closing command.
+    " * If used NewTabMoveLast method - use CloseDuplicateTabs(1).
+    autocmd BufEnter * call CloseDuplicateTabs(1)
+    command CloseDuplicateTabs :call CloseDuplicateTabs(1)
 endif " autocmd
 
 imap <C-j> <Esc>:call MoveTabLeft()<CR>
