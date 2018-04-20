@@ -85,7 +85,9 @@ autocmd BufEnter * :syntax sync fromstart
 """ BACKUP AND SWAP SETTINGS
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set backup
-set backupdir=/tmp
+set undodir=/tmp//
+set backupdir=/tmp//
+set directory=/tmp//
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
